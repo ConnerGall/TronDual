@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "XRActions",
+    "maps": [
+        {
+            "name": "XRI RIghtHand",
+            "id": "452a53a6-2f9d-4d3b-8a47-49d2f9fea3da",
+            "actions": [
+                {
+                    "name": "Spawn",
+                    "type": "Button",
+                    "id": "5ec8e613-5a9f-4529-9dea-7743eb1a48ec",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f3e53723-5c57-4b68-ae29-902542003440",
+                    "path": "<XRController>{RightHand}/{TriggerButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Spawn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
