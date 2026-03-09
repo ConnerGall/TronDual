@@ -65,7 +65,7 @@ public class DiscBehavior : MonoBehaviour
 
         Quaternion targetRotation =
             Quaternion.LookRotation(rb.angularVelocity.normalized, Vector3.up) *
-            Quaternion.Euler(-90f, 0f, 0f);
+            Quaternion.Euler(-90f, 180f, 0f);
 
         rb.MoveRotation(
             Quaternion.Slerp(rb.rotation, targetRotation, stability * Time.fixedDeltaTime)
