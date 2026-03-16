@@ -3,10 +3,10 @@ using UnityEngine;
 public class TargetDestroy : MonoBehaviour
 {
     public int destoryedObjects = 0;
-    ChangeLevel change;
+    public ChangeLevel change;
     private void OnCollisionEnter(Collision collision)
     {
-        change.incrementDestroyed();
+        //change.incrementDestroyed();
         Destroy(gameObject);
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created

@@ -832,7 +832,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1870869739285752623}
   serializedVersion: 4
-  m_Mass: 10
+  m_Mass: 0.5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -938,7 +938,7 @@ MonoBehaviour:
   m_VelocityDamping: 0
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
-  m_AngularVelocityScale: 1
+  m_AngularVelocityScale: 0.1
   m_TrackPosition: 1
   m_SmoothPosition: 0
   m_SmoothPositionAmount: 1.34
@@ -952,7 +952,7 @@ MonoBehaviour:
   m_SmoothScaleAmount: 8
   m_TightenScale: 0.1
   m_ThrowOnDetach: 1
-  m_ThrowSmoothingDuration: 0.25
+  m_ThrowSmoothingDuration: 0.075
   m_ThrowSmoothingCurve:
     serializedVersion: 2
     m_Curve:
@@ -1031,8 +1031,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spinSpeed: 800
   stability: 5
-  returnForce: 20
+  returnForce: 25
   player: {fileID: 0}
+  change: {fileID: 0}
 --- !u!4 &3435670120212551996 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 9a13b94cace2a4d78ac94a0ed0a88843, type: 3}

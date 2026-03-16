@@ -8,6 +8,7 @@ public class DiscBehavior : MonoBehaviour
     public float stability = 5f;
     public float returnForce = 20f;
     public Transform player;
+    public ChangeLevel change;
 
     Rigidbody rb;
     XRGrabInteractable grab;
@@ -27,6 +28,8 @@ public class DiscBehavior : MonoBehaviour
     {
         if (player == null)
             player = Camera.main.transform;
+        if (change == null)
+            change = Object.FindFirstObjectByType<ChangeLevel>();
     }
 
     void FixedUpdate()
@@ -54,7 +57,14 @@ public class DiscBehavior : MonoBehaviour
     void OnRelease(SelectExitEventArgs args)
     {
         rb.constraints = RigidbodyConstraints.FreezeRotationX |
-                         RigidbodyConstraints.FreezeRotationZ;
+                     RigidbodyConstraints.FreezeRotationZ;
+
+        Vector3 forward = player.forward;
+        Vector3 velocity = rb.linearVelocity;
+
+        float speed = velocity.magnitude;
+
+        rb.linearVelocity = forward * speed;
 
         rb.angularVelocity = transform.forward * spinSpeed;
     }
@@ -75,5 +85,12 @@ public class DiscBehavior : MonoBehaviour
     public void StartReturn()
     {
         returning = true;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy")){
+            change.incrementDestroyed();
+        }
     }
 }

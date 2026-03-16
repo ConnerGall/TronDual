@@ -7,7 +7,6 @@ public class ChangeLevel : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     [SerializeField] int enemyCount;
-    TargetDestroy destroyedEnemies;
     public int desCount = 0;
     
     void Start()
@@ -18,6 +17,7 @@ public class ChangeLevel : MonoBehaviour
     public void incrementDestroyed()
     {
         desCount++;
+        Debug.Log("Destroyed count: " + desCount);
     }
 
     // Update is called once per frame
