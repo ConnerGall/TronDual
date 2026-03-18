@@ -15,6 +15,8 @@ public class DiscBehavior : MonoBehaviour
 
     bool returning = false;
 
+    public Animator handAnimator;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -48,6 +50,10 @@ public class DiscBehavior : MonoBehaviour
 
     void OnGrab(SelectEnterEventArgs args)
     {
+        if (handAnimator != null)
+        {
+            handAnimator.SetBool("Closed", true);
+        }
         returning = false;
 
         rb.constraints = RigidbodyConstraints.None;
@@ -56,6 +62,11 @@ public class DiscBehavior : MonoBehaviour
 
     void OnRelease(SelectExitEventArgs args)
     {
+        if (handAnimator != null)
+        {
+            handAnimator.SetBool("Closed", false);
+        }
+
         rb.constraints = RigidbodyConstraints.FreezeRotationX |
                      RigidbodyConstraints.FreezeRotationZ;
 
