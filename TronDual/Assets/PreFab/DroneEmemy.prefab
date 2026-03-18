@@ -13,9 +13,21 @@ PrefabInstance:
       value: DiskSpawner
       objectReference: {fileID: 0}
     - target: {fileID: 3597238422983455145, guid: e4f3b0250d6443449ad09bae44dd279d, type: 3}
+      propertyPath: speed
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597238422983455145, guid: e4f3b0250d6443449ad09bae44dd279d, type: 3}
       propertyPath: bullet
       value: 
       objectReference: {fileID: 4124479549622174360, guid: e1ac3762ac910424094b96ad2cb5a25d, type: 3}
+    - target: {fileID: 3597238422983455145, guid: e4f3b0250d6443449ad09bae44dd279d, type: 3}
+      propertyPath: bulletLife
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597238422983455145, guid: e4f3b0250d6443449ad09bae44dd279d, type: 3}
+      propertyPath: firingRate
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4980343217565626270, guid: e4f3b0250d6443449ad09bae44dd279d, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.047814894
