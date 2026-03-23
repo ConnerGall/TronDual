@@ -18,16 +18,19 @@ public class ChangeLevel : MonoBehaviour
     {
         desCount++;
         Debug.Log("Destroyed count: " + desCount);
+
+        checkIfLevelComplete();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void checkIfLevelComplete()
     {
         if (enemyCount == desCount)
         {
+            // trigger some audio
+
             int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            Debug.Log("Loading Scene " + currentSceneIndex);
             SceneManager.LoadScene(currentSceneIndex + 1);
         }
-
     }
 }
