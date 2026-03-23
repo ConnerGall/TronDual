@@ -22,7 +22,7 @@ public class DiscDestroy : MonoBehaviour
         {
             count++;
         }
-        Debug.Log(count);
+        //Debug.Log(count);
         if (count%2 == 0)
         {
             ReturnToPlayer();
