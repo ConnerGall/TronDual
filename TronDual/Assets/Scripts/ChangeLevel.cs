@@ -28,9 +28,14 @@ public class ChangeLevel : MonoBehaviour
         {
             // trigger some audio
 
-            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-            Debug.Log("Loading Scene " + currentSceneIndex);
-            SceneManager.LoadScene(currentSceneIndex + 1);
+            loadScene();
         }
+    }
+
+    private void loadScene()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log("Loading Scene " + currentSceneIndex);
+        SceneManager.LoadScene(currentSceneIndex + 1);
     }
 }
