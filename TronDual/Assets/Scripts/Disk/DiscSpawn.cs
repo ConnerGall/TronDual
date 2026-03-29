@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class DiscSpawn : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private AudioManager AM = AudioManager.Instance;
 
     public GameObject prefabToSpawn;
     public Transform spawnPoint;
@@ -32,6 +32,13 @@ public class DiscSpawn : MonoBehaviour
 
             DiscDestroy destroyScript = newDisc.GetComponent<DiscDestroy>();
             destroyScript.disc = this;
+
+            // play summon sfx
+            AM.PlayDiscSummon();
+        } else
+        {
+            // play cant summon sfx
+            AM.PlayCantSummon();
         }
     }
    

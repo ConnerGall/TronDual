@@ -515,6 +515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f485d7be367c49b4e89e4a0cb8d83cd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DroneSFX: {fileID: 0}
 --- !u!65 &1702986860
 BoxCollider:
   m_ObjectHideFlags: 0
