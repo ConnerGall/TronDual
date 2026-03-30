@@ -408,10 +408,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1208454826}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &379467121
 MonoBehaviour:
@@ -2604,7 +2604,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 056206927d8640344adb81b148d04cb6, type: 3}
   voiceLines:
   - {fileID: 8300000, guid: f256625913c446b4381145ed3864456c, type: 3}
-  - {fileID: 8300000, guid: 130379850d3ceee4e81b86fd45312f52, type: 3}
+  - {fileID: 8300000, guid: 8b6176a77f0098a4b9b0861b2a921146, type: 3}
   - {fileID: 8300000, guid: b74a610d64129ee4c99d9a4c4b6594a1, type: 3}
   - {fileID: 8300000, guid: 4ca6b0a4d1d491946b842d47850cca0f, type: 3}
   - {fileID: 8300000, guid: c6ff417f686a6934fa9fc72d6a2d9a9e, type: 3}
