@@ -4,15 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class ChangeLevel : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-
     [SerializeField] int enemyCount;
     public int desCount = 0;
+    private GameManager GM = GameManager.Instance;
     
-    void Start()
-    {
-        
-    }
 
     public void incrementDestroyed()
     {
@@ -28,9 +23,28 @@ public class ChangeLevel : MonoBehaviour
         {
             // trigger some audio
 
-            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-            Debug.Log("Loading Scene " + currentSceneIndex);
-            SceneManager.LoadScene(currentSceneIndex + 1);
+            loadScene();
+        }
+    }
+
+    private void loadScene()
+    {
+        if (GM != null) 
+        {
+            GM.currentLevel++;
+
+            if (GM.currentLevel >= 6)
+            {
+                GM.currentLevel = 0;
+                GM.FinishedSimulation();
+            }
+
+            Debug.Log("Loading level " + GM.currentLevel);
+            SceneManager.LoadScene("Level " + GM.currentLevel);
+            GM.StartLevel();
+        } else
+        {
+            Debug.LogError("GM is null | Cannot load scene");
         }
     }
 }

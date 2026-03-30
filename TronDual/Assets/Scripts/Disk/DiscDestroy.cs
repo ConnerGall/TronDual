@@ -8,7 +8,8 @@ public class DiscDestroy : MonoBehaviour
     private Transform player;   
     public float returnSpeed = 4f;
     Rigidbody rb;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    [SerializeField] private DiscSFX Disc;
 
     void Start()
     {
@@ -21,6 +22,9 @@ public class DiscDestroy : MonoBehaviour
         if (collision.gameObject.CompareTag("Wall"))
         {
             count++;
+
+            // Play SFX
+            Disc.DiscHitWall();
         }
         //Debug.Log(count);
         if (count%2 == 0)
@@ -36,7 +40,7 @@ public class DiscDestroy : MonoBehaviour
                 disc.DiscCount--;
             }
             
-            Debug.Log("Destroyed");
+            //Debug.Log("Destroyed");
         }
     }
 
