@@ -204,18 +204,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DroneEmemy
       objectReference: {fileID: 0}
-    - target: {fileID: 3545387922379722035, guid: ad43e048794aff94fa7f80c1c0dc0269, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 4213239683537639305, guid: ad43e048794aff94fa7f80c1c0dc0269, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 22.44732
-      objectReference: {fileID: 0}
-    - target: {fileID: 4213239683537639305, guid: ad43e048794aff94fa7f80c1c0dc0269, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 4.5555468
-      objectReference: {fileID: 0}
     - target: {fileID: 4213239683537639305, guid: ad43e048794aff94fa7f80c1c0dc0269, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.611895
@@ -259,38 +247,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3545387922379722035, guid: ad43e048794aff94fa7f80c1c0dc0269, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 250716460}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad43e048794aff94fa7f80c1c0dc0269, type: 3}
---- !u!1 &250716459 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3545387922379722035, guid: ad43e048794aff94fa7f80c1c0dc0269, type: 3}
-  m_PrefabInstance: {fileID: 250716458}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &250716460
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 250716459}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4369294847119060944, guid: abfaf59075b129f4d93f9890e97ecaee, type: 3}
 --- !u!4 &250716461 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4213239683537639305, guid: ad43e048794aff94fa7f80c1c0dc0269, type: 3}

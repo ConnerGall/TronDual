@@ -12,16 +12,19 @@ public class TargetDestroy : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        // Play SFX before destroying
-        if (DroneSFX == null)
+        if (collision.CompareTag("PlayerDisk"))
         {
-            Debug.LogError("DroneSFX is NULL!!!!!!!! AHHHH!!!");
+            // Play SFX before destroying
+            if (DroneSFX == null)
+            {
+                Debug.LogError("DroneSFX is NULL!!!!!!!! AHHHH!!!");
+            }
+
+            StartCoroutine(DroneSFX.PlayDroneDestroyedSFX());
+
+            Destroy(gameObject);
         }
-
-        StartCoroutine(DroneSFX.PlayDroneDestroyedSFX());
-
-        Destroy(gameObject);
     }
 }
