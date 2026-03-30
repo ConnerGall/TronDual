@@ -21,7 +21,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -8111037960432400878, guid: 9e0e9887f8d95b2448d5c3e639f5df06, type: 3}
+  m_Motion: {fileID: -3588076170404852088, guid: 041c7a5fe292a7548a9131aab0c38b49, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -73,7 +73,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -4604441909003937095, guid: 9e0e9887f8d95b2448d5c3e639f5df06, type: 3}
+  m_Motion: {fileID: -449802118843629770, guid: 041c7a5fe292a7548a9131aab0c38b49, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -135,7 +135,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LHandController
+  m_Name: RHandController
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Closed

@@ -23,12 +23,14 @@ public class ChangeLevel : MonoBehaviour
         {
             // trigger some audio
 
-            loadScene();
+            SwitchLevel();
         }
     }
 
-    private void loadScene()
+    private void SwitchLevel()
     {
+        GM.FadeToBlack();
+
         if (GM != null) 
         {
             GM.currentLevel++;
