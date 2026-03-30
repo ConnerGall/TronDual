@@ -20,25 +20,28 @@ public class MainMenuManager : MonoBehaviour
 
         if (AM == null)
         {
-            Debug.LogError("AudioManager is null in MainMenuManager.Start()");
-            return;
-        }
-
-        StartCoroutine(AM.PlayVoiceLine(6));
-        AM.PlayMusic();
+            Debug.LogError("AudioManager is null in MainMenuManager");
+        } else if (GM == null)
+        {
+            Debug.LogError("GameManager is null in MainMenuManager");
+        } else
+        {
+            StartCoroutine(AM.PlayVoiceLine(6));
+            AM.PlayMusic();
+        }    
     }
 
 
     public void StartButton()
     {
         AM.MenuSelectSFX();
-        StartCoroutine(AM.PlayVoiceLine(7));
 
         Title.text = "Level Select";
-
         startButton.SetActive(false);
         quitButton.SetActive(false);
         levelSelectButtons.SetActive(true);
+
+        GM.StartLevel(); // plays VL for level select
     }
 
     public void QuitButton()
