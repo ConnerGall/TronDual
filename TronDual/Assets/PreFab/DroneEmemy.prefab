@@ -60,6 +60,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: abfaf59075b129f4d93f9890e97ecaee, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8438398c881a8f34288ad40780b2e241, type: 2}
+    - target: {fileID: -5754084199372789682, guid: abfaf59075b129f4d93f9890e97ecaee, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4369294847119060944, guid: 69ad853dedd2bb948a1e37961b4b1039, type: 3}
     - target: {fileID: 919132149155446097, guid: abfaf59075b129f4d93f9890e97ecaee, type: 3}
       propertyPath: m_Name
       value: DroneEmemy
@@ -87,6 +95,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: abfaf59075b129f4d93f9890e97ecaee, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4624680080062406353}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: abfaf59075b129f4d93f9890e97ecaee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6011932760571268973}
   m_SourcePrefab: {fileID: 100100000, guid: abfaf59075b129f4d93f9890e97ecaee, type: 3}
 --- !u!1 &3545387922379722035 stripped
 GameObject:
@@ -254,3 +265,25 @@ MonoBehaviour:
   droneIdle: {fileID: 8300000, guid: 8c5bac1c0147a09449924ae7eca4416b, type: 3}
   droneDestroy: {fileID: 8300000, guid: b8984ac5daeb47841a72f5508ae77256, type: 3}
   drone: {fileID: 5658262485138602718}
+--- !u!64 &6011932760571268973
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3545387922379722035}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4369294847119060944, guid: abfaf59075b129f4d93f9890e97ecaee, type: 3}
