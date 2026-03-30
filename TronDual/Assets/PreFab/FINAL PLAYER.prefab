@@ -711,7 +711,7 @@ Animator:
   m_GameObject: {fileID: 2836796267261925853}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 91bfce850d4be7747b9c703ca069818f, type: 2}
+  m_Controller: {fileID: 9100000, guid: d1d0cc4e8c82f5047be745b40f017f6d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1790,6 +1790,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5153517498714181929, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
+      propertyPath: m_SmoothMotionEnabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5160553004867567882, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -2285,7 +2289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gripAction:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Grip
       m_Type: 0
@@ -2295,7 +2299,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: -4289430672226363583, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   hand: {fileID: 1055226225254452149}
 --- !u!4 &6261168600187180664 stripped
 Transform:
@@ -2325,7 +2329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gripAction:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Grip
       m_Type: 0
@@ -2335,7 +2339,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   hand: {fileID: 4061818427316773354}
 --- !u!4 &6261168600833152665 stripped
 Transform:
