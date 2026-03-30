@@ -95,6 +95,8 @@ public class GameManager : MonoBehaviour
 
         // Ensure fully black at end
         blackScreen.color = new Color(color.r, color.g, color.b, 1f);
+
+        yield return new WaitForSecondsRealtime(duration);
     }
 
     private IEnumerator FadeFromBlackCoroutine()
@@ -114,6 +116,8 @@ public class GameManager : MonoBehaviour
 
         // Ensure fully transparent at end
         blackScreen.color = new Color(color.r, color.g, color.b, 0f);
+
+        yield return new WaitForSecondsRealtime(duration);
     }
 
     public void FinishedSimulation()
