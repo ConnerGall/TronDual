@@ -20,7 +20,7 @@ public class EnemyShot : MonoBehaviour
         mCamera = Camera.main;
         playerPosition = new Vector3(mCamera.transform.position.x, mCamera.transform.position.y, mCamera.transform.position.z);
         moveDirection = (playerPosition - transform.position).normalized;
-        transform.Rotate(90.0f, 0f, 0f, Space.World);
+        transform.Rotate(0f, 0f, 0f, Space.World);
         currScene = SceneManager.GetActiveScene().name;
     }
 
