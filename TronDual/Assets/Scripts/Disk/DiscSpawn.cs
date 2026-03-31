@@ -8,7 +8,9 @@ public class DiscSpawn : MonoBehaviour
 
     public GameObject prefabToSpawn;
     public Transform spawnPoint;
-    public Transform leftSpawnPoint; 
+    public Transform leftSpawnPoint;
+
+
     public int DiscCount = 0;
 
     public InputActionProperty rightspawnAction;
@@ -50,31 +52,15 @@ public class DiscSpawn : MonoBehaviour
 
             DiscDestroy destroyScript = newDisc.GetComponent<DiscDestroy>();
             destroyScript.disc = this;
-
+            // play summon sfx
             AM.PlayDiscSummon();
         }
         else
         {
+            // play cant summon sfx
             AM.PlayCantSummon();
         }
     }
-   // private void SpawnObject(InputAction.CallbackContext context)
-    //{
-       // if (DiscCount <= 2)
-       // {
-          //  GameObject newDisc = Instantiate(prefabToSpawn, spawnPoint.position, spawnPoint.rotation);
-          //  DiscCount++;
-
-           // DiscDestroy destroyScript = newDisc.GetComponent<DiscDestroy>();
-           // destroyScript.disc = this;
-
-            // play summon sfx
-           // AM.PlayDiscSummon();
-      //  } else
-       // {
-            // play cant summon sfx
-         //   AM.PlayCantSummon();
-       // }
-   // }
+   
    
 }

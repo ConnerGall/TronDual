@@ -307,7 +307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 4325981991695056373, guid: e1ac3762ac910424094b96ad2cb5a25d, type: 3}
   bulletLife: 5
-  speed: 0.01
+  speed: 0.03
   firingRate: 3
 --- !u!64 &4628337555390475
 MeshCollider:
