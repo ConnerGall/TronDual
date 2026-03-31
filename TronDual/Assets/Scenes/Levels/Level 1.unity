@@ -317,11 +317,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6429645982132566502, guid: ad43e048794aff94fa7f80c1c0dc0269, type: 3}
+      propertyPath: speed
+      value: 0.05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad43e048794aff94fa7f80c1c0dc0269, type: 3}
+--- !u!4 &1299054025 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6261168600187180664, guid: 1ea6baf73d7b5534a80ac3e4f844d789, type: 3}
+  m_PrefabInstance: {fileID: 2007591561138921259}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1425149620 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ce79bc13062a7804aaa64e9fae4b2cea, type: 3}
@@ -481,7 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5d21ad1922d3b54d82b1ea6d32d6189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyCount: 2
+  enemyCount: 1
   desCount: 0
 --- !u!1 &2029051055
 GameObject:
@@ -514,19 +523,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabToSpawn: {fileID: 1870869739285752623, guid: 050d07ebeef7f0f4783d05f031195a6c, type: 3}
   spawnPoint: {fileID: 2007591561138921260}
+  leftSpawnPoint: {fileID: 1299054025}
   DiscCount: 0
-  spawnAction:
+  rightspawnAction:
     m_UseReference: 1
     m_Action:
-      m_Name: Spawn
+      m_Name: Rightspawn
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: ee8cc9df-bf9c-4930-8aa3-c7f231133dd4
+      m_Id: 3e181179-c949-4832-9add-122f6dfc4e9b
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 5395830743748387341, guid: 6091c8e2930e33946a8a7c576303fdd0, type: 3}
+  leftspawnAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Leftspawn
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 55f33ccf-6b3e-4233-8e48-87aea065c3c9
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 5258994275872747272, guid: 6091c8e2930e33946a8a7c576303fdd0, type: 3}
 --- !u!4 &2029051057
 Transform:
   m_ObjectHideFlags: 0
