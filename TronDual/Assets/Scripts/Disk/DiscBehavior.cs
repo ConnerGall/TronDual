@@ -61,14 +61,14 @@ public class DiscBehavior : MonoBehaviour
         rb.constraints = RigidbodyConstraints.FreezeRotationX |
                      RigidbodyConstraints.FreezeRotationZ;
 
-        Vector3 forward = player.forward;
-        Vector3 velocity = rb.linearVelocity;
+        //Vector3 forward = player.forward;
+        //Vector3 velocity = rb.linearVelocity;
 
-        float speed = velocity.magnitude;
+        //float speed = velocity.magnitude;
 
-        rb.linearVelocity = forward * speed;
+       // rb.linearVelocity = forward * speed;
 
-        rb.angularVelocity = transform.forward * spinSpeed;
+        //rb.angularVelocity = transform.forward * spinSpeed;
     }
 
     void StabilizeDisc()
