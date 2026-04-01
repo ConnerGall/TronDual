@@ -18,9 +18,7 @@ public class HandController : MonoBehaviour
 
     void Update()
     {
-        if (hand == null) return;
-
-        float grip = gripAction.action.ReadValue<float>();
-        hand.SetClosed(grip);
+        float closed = gripAction.action.ReadValue<float>();
+        hand.SetClosed(closed);
     }
 }

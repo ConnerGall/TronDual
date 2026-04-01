@@ -4,36 +4,49 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class Hand : MonoBehaviour
 {
-    Animator animator;
+    private Animator animator;
     private float closedTarget;
     private float closedCurrent;
-    public float speed;
-    private string animatorClosedParam = "Closed";
+    private const string AnimatorClosedParam = "Closed";
 
-    internal void SetClosed(float v)
+    [SerializeField]
+    private float speed = 10f;
+    /// <summary>
+    /// Speed at which the hand closes/opens.
+    /// </summary>
+    public float Speed
     {
-        closedTarget = v;
+        get => speed;
+        set => speed = Mathf.Max(0f, value);
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    /// <summary>
+    /// Sets the target closed value for the hand (0 = open, 1 = closed).
+    /// </summary>
+    /// <param name="value">Target closed value (0 to 1).</param>
+    public void SetClosed(float value)
+    {
+        closedTarget = Mathf.Clamp01(value);
+    }
+
+    private void Start()
     {
         animator = GetComponent<Animator>();
+        closedCurrent = closedTarget;
+        animator.SetFloat(AnimatorClosedParam, closedCurrent);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         AnimateHand();
     }
 
-    void AnimateHand()
+    private void AnimateHand()
     {
-        if (closedCurrent != closedTarget)
+        if (!Mathf.Approximately(closedCurrent, closedTarget))
         {
             closedCurrent = Mathf.MoveTowards(closedCurrent, closedTarget, Time.deltaTime * speed);
-            animator.SetFloat(animatorClosedParam, closedCurrent);
-
+            animator.SetFloat(AnimatorClosedParam, closedCurrent);
         }
     }
 }
